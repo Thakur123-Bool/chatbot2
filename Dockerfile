@@ -15,3 +15,9 @@ EXPOSE 5001
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
+
+# Install Gunicorn
+RUN pip install gunicorn
+
+# Use Gunicorn to run the Flask app
+CMD ["gunicorn", "-b", "0.0.0.0:5001", "app:app"]
