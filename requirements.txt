@@ -1,0 +1,6 @@
+Flask
+langchain_community
+langchain
+langchain_ollama
+chromadb
+PyMuPDF
