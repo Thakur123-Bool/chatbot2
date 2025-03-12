@@ -11,4 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 5001 available to the world outside the container
-EXPOSE 8000
+EXPOSE 5001
+
+# Run the application using Gunicorn for better performance in production
+CMD ["gunicorn", "-b", "0.0.0.0:5001", "app:app"]
